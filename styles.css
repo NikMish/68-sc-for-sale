@@ -1,3 +1,12 @@
+:root {
+  --primary-bg: #f4f4f4;
+  --card-bg: #fff;
+  --text-main: #333;
+  --text-secondary: #666;
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  --mobile-size: 600px;
+}
+
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -16,11 +25,38 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+@media (max-width: 600px) {
+  .wrapper {
+    width: 100%;
+    padding: 10px;
+    box-shadow: none;
+    margin: 0;
+  }
+}
+
+h1, h2, h3 {
   color: #333;
+  text-align: center;
+}
+h3 span {
+  color: #e67e22;
 }
 
 p {
   line-height: 1.6;
   color: #666;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease;
 }
