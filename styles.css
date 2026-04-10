@@ -60,3 +60,8 @@ p {
   box-shadow: var(--box-shadow);
   transition: transform 0.3s ease;
 }
+
+.two-columns {
+  display: flex;
+  gap: 4rem;
+}
